@@ -15,7 +15,7 @@ class LandingPage extends StatelessWidget {
         backgroundColor: Colors.indigo[300],
         appBar: AppBar(
           title: Text(
-            "Crypto",
+            "Krypto",
             style: GoogleFonts.aBeeZee(
                 fontWeight: FontWeight.bold, letterSpacing: 3.0),
           ),
