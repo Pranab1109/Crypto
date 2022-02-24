@@ -1,6 +1,6 @@
-# crypto
+# flutter_cryptocurrency
 
-A new Flutter project.
+A new Flutter application on cryptocurrency.
 
 ## Getting Started
 
