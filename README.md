@@ -2,6 +2,11 @@
 
 Simple app made with flutter and BLOC pattern, that displays the current details of many cryptocurrencies.
 
+# Screenshot
+
+![ScreenShot 1](/screenshots/ss1.png)
+![ScreenShot 2](/screenshots/ss2.png)
+
 ## Documentation
 
 A few resources to get you started if this is your first Flutter project:
