@@ -8,8 +8,11 @@ import 'package:krypto/models/Crypto.dart';
 class DetailsPage extends StatelessWidget {
   final Crypto crypto;
   final int index;
-  const DetailsPage({Key? key, required this.crypto, required this.index})
-      : super(key: key);
+  const DetailsPage({
+    Key? key,
+    required this.crypto,
+    required this.index,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -33,12 +36,14 @@ class DetailsPage extends StatelessWidget {
               start: 0.3,
               child: Container(
                 width: MediaQuery.of(context).size.width * 0.88,
-                height: MediaQuery.of(context).size.height * 0.5,
-                padding: const EdgeInsets.all(8.0),
+                // height: MediaQuery.of(context).size.height * 0.5,
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 8.0, vertical: 18.0),
                 decoration: const BoxDecoration(
                   borderRadius: BorderRadius.all(Radius.circular(10)),
                 ),
                 child: Column(
+                  mainAxisSize: MainAxisSize.min,
                   children: [
                     Hero(
                       tag: index,
@@ -86,6 +91,15 @@ class DetailsPage extends StatelessWidget {
                       txtr: "\$ " + crypto.currentPrice.toString(),
                     ),
                     RowWidget(
+                      txtl: "Current Price",
+                      txtr:
+                          crypto.priceChangePercentage24h!.toStringAsFixed(2) +
+                              " %",
+                      clr: crypto.priceChangePercentage24h! < 0
+                          ? Colors.red[700]
+                          : Colors.green[700],
+                    ),
+                    RowWidget(
                       txtl: "High 24 hr",
                       txtr: "\$ " + crypto.high24h.toString(),
                     ),
@@ -96,14 +110,16 @@ class DetailsPage extends StatelessWidget {
                     RowWidget(
                       txtl: "Price Change 24 hr",
                       txtr: "\$ " + crypto.priceChange24h!.toStringAsFixed(3),
+                      clr: crypto.priceChange24h! < 0
+                          ? Colors.red[700]
+                          : Colors.green[700],
                     ),
                     RowWidget(
                       txtl: "Price Change % 24 hr",
                       txtr: crypto.priceChangePercentage24h.toString() + " %",
-                    ),
-                    RowWidget(
-                      txtl: "Current Price",
-                      txtr: "\$ " + crypto.currentPrice.toString(),
+                      clr: crypto.priceChangePercentage24h! < 0
+                          ? Colors.red[700]
+                          : Colors.green[700],
                     ),
                     RowWidget(
                       txtl: "Market Cap",
@@ -113,6 +129,9 @@ class DetailsPage extends StatelessWidget {
                       txtl: "Market Cap Change % 24 hr",
                       txtr:
                           crypto.marketCapChangePercentage24h.toString() + " %",
+                      clr: crypto.marketCapChangePercentage24h! < 0
+                          ? Colors.red[700]
+                          : Colors.green[700],
                     ),
                   ],
                 ),

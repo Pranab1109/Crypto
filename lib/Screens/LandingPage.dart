@@ -55,9 +55,16 @@ class LandingPage extends StatelessWidget {
                 return RefreshIndicator(
                   onRefresh: () {
                     context.read<CryptoDataBloc>().add(LoadCryptoDataEvent());
-                    ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
-                      content: Text('Refreshing'),
+                    ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                      content: Text(
+                        'Refreshing',
+                        style: GoogleFonts.aBeeZee(
+                          fontWeight: FontWeight.w700,
+                          color: Colors.black,
+                        ),
+                      ),
                       behavior: SnackBarBehavior.floating,
+                      backgroundColor: Colors.white,
                     ));
                     return Future.delayed(
                         const Duration(microseconds: 1), () {});

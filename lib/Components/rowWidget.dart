@@ -3,7 +3,13 @@ import 'package:google_fonts/google_fonts.dart';
 
 class RowWidget extends StatelessWidget {
   final String txtr, txtl;
-  const RowWidget({Key? key, required this.txtr, required this.txtl})
+
+  final Color? clr;
+  const RowWidget(
+      {Key? key,
+      required this.txtr,
+      required this.txtl,
+      this.clr = Colors.black})
       : super(key: key);
 
   @override
@@ -20,7 +26,7 @@ class RowWidget extends StatelessWidget {
           ),
           Text(
             txtr,
-            style: GoogleFonts.aBeeZee(fontWeight: FontWeight.bold),
+            style: GoogleFonts.aBeeZee(fontWeight: FontWeight.bold, color: clr),
             textAlign: TextAlign.right,
           ),
         ],
