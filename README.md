@@ -4,8 +4,8 @@ Simple app made with flutter and BLOC pattern, that displays the current details
 
 # Screenshot
 
-![ScreenShot 1](/https://github.com/Pranab1109/Crypto/blob/master/Screenshots/ss1.png)
-![ScreenShot 2](/https://github.com/Pranab1109/Crypto/blob/master/Screenshots/ss2.png)
+![ScreenShot 1](https://github.com/Pranab1109/Crypto/blob/master/Screenshots/ss1.png)
+![ScreenShot 2](https://github.com/Pranab1109/Crypto/blob/master/Screenshots/ss2.png)
 
 ## Documentation
 
